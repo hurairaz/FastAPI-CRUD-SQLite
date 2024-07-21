@@ -110,7 +110,7 @@ FastAPI-CRUD-SQLite
 
 ## Troubleshooting
 
-### In case you are not accessing anything on your application at [http://127.0.0.1:8000], follow these steps to resolve it:
+### In case you are not accessing anything on your application at `http://127.0.0.1:8000`, follow these steps to resolve it:
 
 1. **Ensure that port 8000 is not already in use:**
 
@@ -142,5 +142,5 @@ FastAPI-CRUD-SQLite
    uvicorn main:app --reload
    ```
 
-6. **Access the API at [http://localhost:8000](http://localhost:8000) in your browser or API client.**
+6. **Access the API at`http://127.0.0.1:8000` in your browser or API client.**
 
