@@ -107,3 +107,40 @@ FastAPI-CRUD-SQLite
    Open your browser and go to `http://127.0.0.1:8000/docs` to see the interactive API documentation provided by Swagger UI.
 
 ---
+
+## Troubleshooting
+
+### In case you are not accessing anything on your application at [http://127.0.0.1:8000], follow these steps to resolve it:
+
+1. **Ensure that port 8000 is not already in use:**
+
+   ```bash
+   netstat -ano | findstr :8000
+   ```
+
+2. **If port 8000 is in use, terminate the process (replace `PID` with the appropriate process ID):**
+
+   ```bash
+   taskkill /PID <PID> /F
+   ```
+
+3. **Check for any remaining Python processes:**
+
+   ```bash
+   tasklist | findstr python
+   ```
+
+4. **If Python processes are still active, terminate them:**
+
+   ```bash
+   taskkill /PID <PID> /F
+   ```
+
+5. **Run the FastAPI application using uvicorn:**
+
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+6. **Access the API at [http://localhost:8000](http://localhost:8000) in your browser or API client.**
+
